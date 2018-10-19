@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mike Raguso</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="extend">
@@ -13,10 +14,18 @@
     <h3 id="headerCas--title">Math is Hard</h3>
   </div>
   <div class="inner">
-      <p>Cassie, now you can stop asking me 😁</p>
-      <h3 class="mainCas--title">Fill Out Some Details:</h3>
-      <label for="wage">Amount Paid Per Hour:</label>
-      <input type="number" name="wage" id="wage">
+      <p id="txtMsg">Cassie, this is for you 😁</p>
+      <h3 class="mainCas--title">Fill Out Some Details</h3>
+      <label for="wage">Amount You Get Paid Per Hour:</label>
+      <input class="numEntry" type="number" name="wage" id="wage">
+      <label for="hours">Number of Hours Worked:</label>
+      <input class="numEntry" type="number" name="hours" id="hours">
+      <label for="minutes">Number of Minutes Worked:</label>
+      <input class="numEntry" type="number" name="minutes" id="minutes">
+      <input class="button" id="calcButton" type="submit" value="💰 Big Money Calculator 💰">
+      <div id="calculated">
+      </div>
   </div>
+  <script src="/app.js"></script>
 </body>
 </html>

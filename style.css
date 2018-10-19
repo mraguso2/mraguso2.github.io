@@ -1,3 +1,7 @@
+/* temp styles to get calc page out as quickly as possible
+ * TODO: clean up styles and html pages
+*/
+
 * {
   padding: 0;
   margin: 0;
@@ -5,11 +9,14 @@
 
 html {
   background-color: #f1f5f8;
+  line-height: 1.5;
 }
 
 body.extend {
   background-color: #f5e9fa;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .home {
@@ -55,8 +62,70 @@ body.extend {
 
 .inner {
   margin: 10px 30px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
 }
 
 .mainCas--title {
   padding: 10px 0px;
+  text-align: center;
+}
+
+input.numEntry {
+  margin-bottom: 20px;
+  width: 110px;
+  font-size: 1.1rem;
+}
+
+input[type=submit] {
+  width: 250px;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 3px;
+  border-bottom: 2px solid hsl(261.5,92.3%,60%);
+  background-color: #ac7dff;
+  color: hsl(261.5,92.3%,98%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type=submit]:hover {
+  /* border-bottom: 2px solid hsl(261.5,92.3%,60%); */
+  background-color: hsl(261.5,92.3%,60%);
+  color: hsl(261.5,92.3%,98%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#calculated {
+  background-color: #f1f5f8;
+  line-height: 1.5;
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  padding: 5px;
+  position: relative;
+  left: -200%;
+  transition: all 0.4s;
+  border: 2px solid #52ad92f1;
+  font-size: 2rem;
+}
+
+#calculated::before {
+  content: "$";
+  position: absolute;
+}
+
+#calculated.display {
+  left: 0%;
+}
+
+#calculated p {
+  padding-left: 20px;
+}
+
+#calculated.error {
+  border: 2px solid #ec3818;
+  font-size: 1.2rem;
 }
