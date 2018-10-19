@@ -3,10 +3,10 @@
 // find all elements needed
 
 var inputs = Array.from(document.querySelectorAll('input[type=number]'));
-var calcButton = document.querySelector('#calcButton');
+var calculateButton = document.querySelector('#calcButton');
 var calculated = document.querySelector('#calculated');
 
-calcButton.addEventListener('click', calculateValues);
+calculateButton.addEventListener('click', calculateValues);
 inputs.map(function (input) {
   return input.addEventListener('focus', clearDisplayValues);
 });
